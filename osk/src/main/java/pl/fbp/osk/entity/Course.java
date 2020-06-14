@@ -15,15 +15,15 @@ public class Course {
     private String kategoria;
 
     @OneToMany(mappedBy = "course", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    @JsonBackReference
+    @JsonBackReference(value = "c_cd")
     private Set<CourseData> courseData;
 
     @OneToMany(mappedBy = "course", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    @JsonBackReference
+    @JsonBackReference(value = "c_dl")
     private Set<DrivingLesson> drivingLessons;
 
     @OneToMany(mappedBy = "course", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    @JsonBackReference
+    @JsonBackReference(value = "c_ie")
     private Set<InternalExam> internalExams;
 
     public void setId(long id) {

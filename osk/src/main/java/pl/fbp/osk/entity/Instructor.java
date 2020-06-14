@@ -8,22 +8,22 @@ import java.util.Set;
 @Entity
 public class Instructor {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
     private String imie;
     private String nazwisko;
 
     @OneToMany(mappedBy = "instructor", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    @JsonBackReference
+    @JsonBackReference(value = "i_l")
     private Set<Lecture> lectures;
 
     @OneToMany(mappedBy = "instructor", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    @JsonBackReference
+    @JsonBackReference(value = "i_dl")
     private Set<DrivingLesson> drivingLessons;
 
     @OneToMany(mappedBy = "instructor", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    @JsonBackReference
+    @JsonBackReference(value = "i_ie")
     private Set<InternalExam> internalExams;
 
     public long getId() {

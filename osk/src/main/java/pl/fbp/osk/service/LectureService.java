@@ -21,4 +21,7 @@ public class LectureService {
     public Optional<Lecture> findById(Long id) {
         return lectureRepository.findById(id);
     }
+    public Lecture createLecture(Lecture lecture) {
+        return lectureRepository.save(lecture);
+    }
 }

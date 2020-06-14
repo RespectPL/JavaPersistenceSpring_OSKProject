@@ -2,11 +2,10 @@ package pl.fbp.osk.restservice;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+import pl.fbp.osk.entity.Instructor;
 import pl.fbp.osk.entity.Lecture;
+import pl.fbp.osk.entity.Participant;
 import pl.fbp.osk.service.InstructorService;
 import pl.fbp.osk.service.LectureService;
 import pl.fbp.osk.service.ParticipantService;
@@ -32,5 +31,16 @@ public class LectureController {
     public ResponseEntity<Lecture> getLectureById(@PathVariable Long id) {
         Optional<Lecture> lecture = lectureService.findById(id);
         return ResponseEntity.ok(lecture.get());
+    }
+
+    @PostMapping("instructor/determine/{instructorId}/{participantId}")
+    public Lecture newLecture(@PathVariable(value = "instructorId") Long instructorId,
+                              @PathVariable(value = "participantId") Long participantId,
+                              @RequestBody Lecture lecture) {
+        Optional<Instructor> instructor = instructorService.findById(instructorId);
+        lecture.setInstructor(instructor.get());
+        Optional<Participant> participant = participantService.findById(participantId);
+        lecture.setParticipant(participant.get());
+        return lectureService.createLecture(lecture);
     }
 }

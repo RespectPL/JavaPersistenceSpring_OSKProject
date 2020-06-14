@@ -16,7 +16,7 @@ public class Vehicle {
     private String nrRejestracyjny;
 
     @OneToMany(mappedBy = "vehicle", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    @JsonBackReference
+    @JsonBackReference(value = "veh_dl")
     private Set<DrivingLesson> drivingLessons;
 
     public void setDrivingLessons(Set<DrivingLesson> drivingLessons) {

@@ -18,19 +18,19 @@ public class Participant {
     private String pkk;
 
     @OneToMany(mappedBy = "participant", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    @JsonBackReference
+    @JsonBackReference(value = "p_cd")
     private Set<CourseData> courseData;
 
     @OneToMany(mappedBy = "participant", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    @JsonBackReference
+    @JsonBackReference(value = "p_l")
     private Set<Lecture> lectures;
 
     @OneToMany(mappedBy = "participant", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    @JsonBackReference
+    @JsonBackReference(value = "p_dl")
     private Set<DrivingLesson> drivingLessons;
 
     @OneToMany(mappedBy = "participant", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    @JsonBackReference
+    @JsonBackReference(value = "p_ie")
     private Set<InternalExam> internalExams;
 
     public void setId(long id) {

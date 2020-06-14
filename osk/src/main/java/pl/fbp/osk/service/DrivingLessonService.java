@@ -21,4 +21,7 @@ public class DrivingLessonService {
     public Optional<DrivingLesson> findById(Long id) {
         return drivingLessonRepository.findById(id);
     }
+    public DrivingLesson createDrivingLesson(DrivingLesson drivingLesson) {
+        return drivingLessonRepository.save(drivingLesson);
+    }
 }

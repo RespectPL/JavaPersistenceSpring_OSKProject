@@ -21,4 +21,7 @@ public class ParticipantService {
     public Optional<Participant> findById(Long id) {
         return participantRepository.findById(id);
     }
+    public Participant createParticipant(Participant participant) {
+        return participantRepository.save(participant);
+    }
 }

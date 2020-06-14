@@ -2,11 +2,8 @@ package pl.fbp.osk.restservice;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-import pl.fbp.osk.entity.DrivingLesson;
+import org.springframework.web.bind.annotation.*;
+import pl.fbp.osk.entity.*;
 import pl.fbp.osk.service.*;
 
 import java.util.List;
@@ -34,5 +31,22 @@ public class DrivingLessonController {
     public ResponseEntity<DrivingLesson> getDrivingLessonById(@PathVariable Long id) {
         Optional<DrivingLesson> drivingLesson = drivingLessonService.findById(id);
         return ResponseEntity.ok(drivingLesson.get());
+    }
+
+    @PostMapping("/instructor/determine/{instructorId}/{participantId}/{courseId}/{vehicleId}")
+    public DrivingLesson newDrivingLesson(@PathVariable(value = "instructorId") Long instructorId,
+                                          @PathVariable(value = "participantId") Long participantId,
+                                          @PathVariable(value = "courseId") Long courseId,
+                                          @PathVariable(value = "vehicleId") Long vehicleId,
+                                          @RequestBody DrivingLesson drivingLesson) {
+        Optional<Instructor> instructor = instructorService.findById(instructorId);
+        drivingLesson.setInstructor(instructor.get());
+        Optional<Participant> participant = participantService.findById(participantId);
+        drivingLesson.setParticipant(participant.get());
+        Optional<Course> course = courseService.findById(courseId);
+        drivingLesson.setCourse(course.get());
+        Optional<Vehicle> vehicle = vehicleService.findById(vehicleId);
+        drivingLesson.setVehicle(vehicle.get());
+        return drivingLessonService.createDrivingLesson(drivingLesson);
     }
 }
