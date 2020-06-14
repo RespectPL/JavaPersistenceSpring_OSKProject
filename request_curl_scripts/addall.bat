@@ -16,7 +16,6 @@ curl -i -X POST -H "Content-Type: application/json" -d "{\"typ\":\"motorower\",\
 curl -i -X POST -H "Content-Type: application/json" -d "{\"temat\":\"Znaki ostrzegawcze\",\"date\":\"2020-06-14\",\"timea\":\"15:00\",\"sumHour\":2}" http://127.0.0.1:8080/osk/lectures/instructor/determine/3/1
 curl -i -X POST -H "Content-Type: application/json" -d "{\"temat\":\"Znaki nakazu\",\"date\":\"2020-06-15\",\"timea\":\"15:00\",\"sumHour\":2}" http://127.0.0.1:8080/osk/lectures/instructor/determine/3/1
 
-REM ustalanie jazd z terminem, pojazdem, kursem
 curl -i -X POST -H "Content-Type: application/json" -d "{\"date\":\"2020-06-14\",\"time\":\"15:00\",\"sumHour\":2}" http://127.0.0.1:8080/osk/driving_lessons//instructor/determine/4/2/6/9
 curl -i -X POST -H "Content-Type: application/json" -d "{\"date\":\"2020-06-15\",\"time\":\"15:00\",\"sumHour\":2}" http://127.0.0.1:8080/osk/driving_lessons//instructor/determine/4/2/6/9
 
