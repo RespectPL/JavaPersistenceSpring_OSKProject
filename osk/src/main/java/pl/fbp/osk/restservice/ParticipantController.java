@@ -7,6 +7,7 @@ import pl.fbp.osk.entity.Participant;
 import pl.fbp.osk.service.ParticipantService;
 
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
 @RestController
@@ -28,5 +29,12 @@ public class ParticipantController {
     @PostMapping("/register")
     public Participant newParticipant(@RequestBody Participant participant) {
         return participantService.createParticipant(participant);
+    }
+
+    @PatchMapping("update_data/{participantId}")
+    public ResponseEntity<Participant> updateParticipant(@RequestBody Map<String, Object> updates,
+                                                         @PathVariable Long participantId) {
+        Optional<Participant> updatedParticipant = participantService.updateParticipant(updates, participantId);
+        return ResponseEntity.of(updatedParticipant);
     }
 }

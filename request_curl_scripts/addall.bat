@@ -25,5 +25,6 @@ curl -i -X POST -H "Content-Type: application/json" -d "{\"date\":\"2020-06-15\"
 curl -i -X POST -H "Content-Type: application/json" -d "{\"date\":\"2020-06-21\",\"time\":\"18:00\",\"sumHour\":5}" http://127.0.0.1:8080/osk/driving_lessons/instructor/determine/3/1/7/10
 
 curl -i -X POST -H "Content-Type: application/json" -d "{\"date\":\"2020-06-21\",\"time\":\"12:00\"}" http://127.0.0.1:8080/osk/internal_exams/instructor/3/determine_exam/1/course/7
+curl -i -X POST -H "Content-Type: application/json" -d "{\"date\":\"2020-06-22\",\"time\":\"17:00\"}" http://127.0.0.1:8080/osk/internal_exams/instructor/3/determine_exam/2/course/6
 
 Pause

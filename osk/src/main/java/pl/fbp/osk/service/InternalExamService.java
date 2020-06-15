@@ -7,6 +7,7 @@ import pl.fbp.osk.entity.InternalExam;
 import pl.fbp.osk.repository.InternalExamRepository;
 
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
 @Service
@@ -23,5 +24,22 @@ public class InternalExamService {
     }
     public InternalExam createInternalExam(InternalExam internalExam) {
         return internalExamRepository.save(internalExam);
+    }
+    public void deleteById(Long internalExamId) {
+        internalExamRepository.deleteById(internalExamId);
+    }
+    public Optional<InternalExam> updateInternalExam(Map<String, Object> updates, Long internalExamId) {
+        Optional<InternalExam> internalExamById = internalExamRepository.findById(internalExamId);
+        if(internalExamById.isPresent()) {
+            InternalExam internalExam = internalExamById.get();
+            if(updates.containsKey("date")) {
+                internalExam.setDate((String) updates.get("date"));
+            }
+            if(updates.containsKey("time")) {
+                internalExam.setTime((String) updates.get("time"));
+            }
+            internalExamRepository.save(internalExam);
+        }
+        return internalExamById;
     }
 }

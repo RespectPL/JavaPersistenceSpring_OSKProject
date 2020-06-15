@@ -13,6 +13,7 @@ import pl.fbp.osk.service.InternalExamService;
 import pl.fbp.osk.service.ParticipantService;
 
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
 @RestController
@@ -49,5 +50,17 @@ public class InternalExamController {
         Optional<Course> course = courseService.findById(courseId);
         internalExam.setCourse(course.get());
         return internalExamService.createInternalExam(internalExam);
+    }
+
+    @PatchMapping("/instructor/update/{internalExamId}")
+    public ResponseEntity<InternalExam> updateInternalExam(@RequestBody Map<String, Object> updates,
+                                                           @PathVariable Long internalExamId) {
+        Optional<InternalExam> updatedInternalExam = internalExamService.updateInternalExam(updates, internalExamId);
+        return ResponseEntity.of(updatedInternalExam);
+    }
+
+    @DeleteMapping("/instructor/delete/{internalExamId}")
+    public void deleteInternalExam(@PathVariable long internalExamId) {
+        internalExamService.deleteById(internalExamId);
     }
 }
