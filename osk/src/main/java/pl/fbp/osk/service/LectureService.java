@@ -3,6 +3,7 @@ package pl.fbp.osk.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
+import pl.fbp.osk.entity.Instructor;
 import pl.fbp.osk.entity.Lecture;
 import pl.fbp.osk.repository.LectureRepository;
 
@@ -23,5 +24,8 @@ public class LectureService {
     }
     public Lecture createLecture(Lecture lecture) {
         return lectureRepository.save(lecture);
+    }
+    public List<Lecture> findByInstructor(Instructor instructor) {
+        return lectureRepository.findByInstructor(instructor);
     }
 }

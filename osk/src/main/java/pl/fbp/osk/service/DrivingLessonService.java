@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 import pl.fbp.osk.entity.DrivingLesson;
+import pl.fbp.osk.entity.Instructor;
 import pl.fbp.osk.repository.DrivingLessonRepository;
 
 import java.util.List;
@@ -23,5 +24,8 @@ public class DrivingLessonService {
     }
     public DrivingLesson createDrivingLesson(DrivingLesson drivingLesson) {
         return drivingLessonRepository.save(drivingLesson);
+    }
+    public List<DrivingLesson> findByInstructor(Instructor instructor) {
+        return drivingLessonRepository.findByInstructor(instructor);
     }
 }

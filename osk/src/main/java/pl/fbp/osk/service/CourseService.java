@@ -22,8 +22,8 @@ public class CourseService {
     public Optional<Course> findById(Long id) {
         return courseRepository.findById(id);
     }
-    public List<Course> findByOznaczenie(String oznaczenie) {
-        return (List<Course>) courseRepository.findByOznaczenie(oznaczenie);
+    public Optional<Course> findByOznaczenie(String oznaczenie) {
+        return courseRepository.findByOznaczenieIgnoreCase(oznaczenie);
     }
     public Course createCourse(Course course) {
         return courseRepository.save(course);
@@ -38,7 +38,7 @@ public class CourseService {
            return courseRepository.save(course);
         });
     }
-    public Optional<Course> uodateCourse(Map<String, Object> updates, Long courseId) {
+    public Optional<Course> updateCourse(Map<String, Object> updates, Long courseId) {
         Optional<Course> courseById = courseRepository.findById(courseId);
         if(courseById.isPresent()) {
             Course course = courseById.get();

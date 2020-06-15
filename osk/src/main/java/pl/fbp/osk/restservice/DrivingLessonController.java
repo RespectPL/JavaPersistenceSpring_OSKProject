@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.*;
 import pl.fbp.osk.entity.*;
 import pl.fbp.osk.service.*;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -31,6 +32,17 @@ public class DrivingLessonController {
     public ResponseEntity<DrivingLesson> getDrivingLessonById(@PathVariable Long id) {
         Optional<DrivingLesson> drivingLesson = drivingLessonService.findById(id);
         return ResponseEntity.ok(drivingLesson.get());
+    }
+    @GetMapping(value = "/instructor/{instructorId}/get_driving_lessons")
+    public ResponseEntity<List<DrivingLesson>> getDrivingLessonByInstructor(@PathVariable Long instructorId) {
+        Optional<Instructor> getinstructor = instructorService.findById(instructorId);
+        if(getinstructor.isPresent()) {
+            Instructor instructor = getinstructor.get();
+            return ResponseEntity.ok(drivingLessonService.findByInstructor(instructor));
+        }
+        else {
+            return ResponseEntity.ok(new ArrayList<>());
+        }
     }
 
     @PostMapping("/instructor/determine/{instructorId}/{participantId}/{courseId}/{vehicleId}")

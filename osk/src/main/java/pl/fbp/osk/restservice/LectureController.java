@@ -10,6 +10,7 @@ import pl.fbp.osk.service.InstructorService;
 import pl.fbp.osk.service.LectureService;
 import pl.fbp.osk.service.ParticipantService;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -32,8 +33,19 @@ public class LectureController {
         Optional<Lecture> lecture = lectureService.findById(id);
         return ResponseEntity.ok(lecture.get());
     }
+    @GetMapping(value = "/instructor/{instructorId}/get_lectures")
+    public ResponseEntity<List<Lecture>> getLectureByInstructor(@PathVariable(value = "instructorId") Long instructorId) {
+        Optional<Instructor> getinstructor = instructorService.findById(instructorId);
+        if(getinstructor.isPresent()) {
+            Instructor instructor = getinstructor.get();
+            return ResponseEntity.ok(lectureService.findByInstructor(instructor));
+        }
+        else {
+            return ResponseEntity.ok(new ArrayList<>());
+        }
+    }
 
-    @PostMapping("instructor/determine/{instructorId}/{participantId}")
+    @PostMapping("/instructor/determine/{instructorId}/{participantId}")
     public Lecture newLecture(@PathVariable(value = "instructorId") Long instructorId,
                               @PathVariable(value = "participantId") Long participantId,
                               @RequestBody Lecture lecture) {

@@ -26,7 +26,7 @@ public class CourseController {
         return ResponseEntity.ok(course.get());
     }
     @GetMapping(value = "/oznaczenie/{oznaczenie}", produces = "application/json")
-    public List<Course> getCourseByOznaczenie(@PathVariable String oznaczenie) {
+    public Optional<Course> getCourseByOznaczenie(@PathVariable String oznaczenie) {
         return courseService.findByOznaczenie(oznaczenie);
     }
 
@@ -42,7 +42,7 @@ public class CourseController {
     }
     @PatchMapping("/update/{id}")
     public ResponseEntity<Course> updateCourse(@RequestBody Map<String, Object> updates, @PathVariable Long id) {
-        Optional<Course> updatedCourse = courseService.uodateCourse(updates, id);
+        Optional<Course> updatedCourse = courseService.updateCourse(updates, id);
         return ResponseEntity.of(updatedCourse);
     }
 

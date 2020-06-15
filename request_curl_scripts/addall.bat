@@ -13,6 +13,9 @@ curl -i -X POST -H "Content-Type: application/json" -d "{\"typ\":\"samochod osob
 curl -i -X POST -H "Content-Type: application/json" -d "{\"typ\":\"motocykl\",\"nazwa\":\"Yamaha TZR 50/70\",\"nrRejestracyjny\":\"LRA 0022\"}" http://127.0.0.1:8080/osk/vehicles/add
 curl -i -X POST -H "Content-Type: application/json" -d "{\"typ\":\"motorower\",\"nazwa\":\"Bardzo nieznany model\",\"nrRejestracyjny\":\"LRA 0000\"}" http://127.0.0.1:8080/osk/vehicles/add
 
+curl -i -X POST -H "Content-Type: application/json" -d "{}" http://127.0.0.1:8080/osk/course_data/participant/1/join_course/A
+curl -i -X POST -H "Content-Type: application/json" -d "{}" http://127.0.0.1:8080/osk/course_data/participant/2/join_course/B
+
 curl -i -X POST -H "Content-Type: application/json" -d "{\"temat\":\"Znaki ostrzegawcze\",\"date\":\"2020-06-14\",\"timea\":\"15:00\",\"sumHour\":2}" http://127.0.0.1:8080/osk/lectures/instructor/determine/3/1
 curl -i -X POST -H "Content-Type: application/json" -d "{\"temat\":\"Znaki nakazu\",\"date\":\"2020-06-15\",\"timea\":\"15:00\",\"sumHour\":2}" http://127.0.0.1:8080/osk/lectures/instructor/determine/3/1
 
