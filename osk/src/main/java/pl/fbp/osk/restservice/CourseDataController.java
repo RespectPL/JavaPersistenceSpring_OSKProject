@@ -12,6 +12,7 @@ import pl.fbp.osk.service.ParticipantService;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
 @RestController
@@ -60,5 +61,19 @@ public class CourseDataController {
         courseData.setCompleted(false);
         courseData.setPaid(false);
         return courseDataService.createCourseData(courseData);
+    }
+
+    @PatchMapping("/instructor/end_course/{courseId}")
+    public ResponseEntity<CourseData> updateCourseDataEndCourse(@RequestBody Map<String, Object> updates,
+                                                       @PathVariable Long courseId) {
+        Optional<CourseData> updatedCourseData = courseDataService.updateCourseData(updates, courseId);
+        return ResponseEntity.of(updatedCourseData);
+    }
+
+    @PatchMapping("/participant/pay_course/{courseId}")
+    public ResponseEntity<CourseData> updateCourseDataPayCourse(@RequestBody Map<String, Object> updates,
+                                                       @PathVariable Long courseId) {
+        Optional<CourseData> updatedCourseData = courseDataService.updateCourseData(updates, courseId);
+        return ResponseEntity.of(updatedCourseData);
     }
 }

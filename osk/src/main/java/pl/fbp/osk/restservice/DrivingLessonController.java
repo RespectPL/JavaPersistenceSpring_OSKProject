@@ -8,6 +8,7 @@ import pl.fbp.osk.service.*;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
 @RestController
@@ -60,5 +61,17 @@ public class DrivingLessonController {
         Optional<Vehicle> vehicle = vehicleService.findById(vehicleId);
         drivingLesson.setVehicle(vehicle.get());
         return drivingLessonService.createDrivingLesson(drivingLesson);
+    }
+
+    @PatchMapping("/instructor/update/{drivingLessonId}")
+    public ResponseEntity<DrivingLesson> updateDrivingLesson(@RequestBody Map<String, Object> updates,
+                                                             @PathVariable Long drivingLessonId) {
+        Optional<DrivingLesson> updatedDrivingLesson = drivingLessonService.updateDrivingLesson(updates, drivingLessonId);
+        return ResponseEntity.of(updatedDrivingLesson);
+    }
+
+    @DeleteMapping("/instructor/delete/{drivingLessonId}")
+    public void deleteDrivingLesson(@PathVariable long drivingLessonId) {
+        drivingLessonService.deleteById(drivingLessonId);
     }
 }

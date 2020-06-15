@@ -18,8 +18,12 @@ curl -i -X POST -H "Content-Type: application/json" -d "{}" http://127.0.0.1:808
 
 curl -i -X POST -H "Content-Type: application/json" -d "{\"temat\":\"Znaki ostrzegawcze\",\"date\":\"2020-06-14\",\"timea\":\"15:00\",\"sumHour\":2}" http://127.0.0.1:8080/osk/lectures/instructor/determine/3/1
 curl -i -X POST -H "Content-Type: application/json" -d "{\"temat\":\"Znaki nakazu\",\"date\":\"2020-06-15\",\"timea\":\"15:00\",\"sumHour\":2}" http://127.0.0.1:8080/osk/lectures/instructor/determine/3/1
+curl -i -X POST -H "Content-Type: application/json" -d "{\"temat\":\"Testowy wyklad\",\"date\":\"2020-06-15\",\"timea\":\"15:00\",\"sumHour\":2}" http://127.0.0.1:8080/osk/lectures/instructor/determine/4/2
 
-curl -i -X POST -H "Content-Type: application/json" -d "{\"date\":\"2020-06-14\",\"time\":\"15:00\",\"sumHour\":2}" http://127.0.0.1:8080/osk/driving_lessons//instructor/determine/4/2/6/9
-curl -i -X POST -H "Content-Type: application/json" -d "{\"date\":\"2020-06-15\",\"time\":\"15:00\",\"sumHour\":2}" http://127.0.0.1:8080/osk/driving_lessons//instructor/determine/4/2/6/9
+curl -i -X POST -H "Content-Type: application/json" -d "{\"date\":\"2020-06-14\",\"time\":\"15:00\",\"sumHour\":2}" http://127.0.0.1:8080/osk/driving_lessons/instructor/determine/4/2/6/9
+curl -i -X POST -H "Content-Type: application/json" -d "{\"date\":\"2020-06-15\",\"time\":\"15:00\",\"sumHour\":2}" http://127.0.0.1:8080/osk/driving_lessons/instructor/determine/4/2/6/9
+curl -i -X POST -H "Content-Type: application/json" -d "{\"date\":\"2020-06-21\",\"time\":\"18:00\",\"sumHour\":5}" http://127.0.0.1:8080/osk/driving_lessons/instructor/determine/3/1/7/10
+
+curl -i -X POST -H "Content-Type: application/json" -d "{\"date\":\"2020-06-21\",\"time\":\"12:00\"}" http://127.0.0.1:8080/osk/internal_exams/instructor/3/determine_exam/1/course/7
 
 Pause

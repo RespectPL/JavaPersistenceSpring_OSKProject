@@ -12,6 +12,7 @@ import pl.fbp.osk.service.ParticipantService;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
 @RestController
@@ -54,5 +55,17 @@ public class LectureController {
         Optional<Participant> participant = participantService.findById(participantId);
         lecture.setParticipant(participant.get());
         return lectureService.createLecture(lecture);
+    }
+
+    @PatchMapping("/instructor/update/{lectureId}")
+    public ResponseEntity<Lecture> updateLecture(@RequestBody Map<String, Object> updates,
+                                                 @PathVariable Long lectureId) {
+        Optional<Lecture> updatedLecture = lectureService.updateLecture(updates, lectureId);
+        return ResponseEntity.of(updatedLecture);
+    }
+
+    @DeleteMapping("/instructor/delete/{lectureId}")
+    public void deleteLecture(@PathVariable long lectureId) {
+        lectureService.deleteById(lectureId);
     }
 }

@@ -21,4 +21,7 @@ public class InternalExamService {
     public Optional<InternalExam> findById(Long id) {
         return internalExamRepository.findById(id);
     }
+    public InternalExam createInternalExam(InternalExam internalExam) {
+        return internalExamRepository.save(internalExam);
+    }
 }

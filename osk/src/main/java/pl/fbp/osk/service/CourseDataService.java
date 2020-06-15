@@ -8,6 +8,7 @@ import pl.fbp.osk.entity.CourseData;
 import pl.fbp.osk.repository.CourseDataRepository;
 
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
 @Service
@@ -38,5 +39,19 @@ public class CourseDataService {
         else {
             return (List<CourseData>) courseDataRepository.findAll();
         }
+    }
+    public Optional<CourseData> updateCourseData(Map<String, Object> updates, Long courseId) {
+        Optional<CourseData> courseDataById = courseDataRepository.findById(courseId);
+        if(courseDataById.isPresent()) {
+            CourseData courseData = courseDataById.get();
+            if(updates.containsKey("paid")) {
+                courseData.setPaid(Boolean.parseBoolean((String) updates.get("paid")));
+            }
+            if(updates.containsKey("completed")) {
+                courseData.setCompleted(Boolean.parseBoolean((String) updates.get("completed")));
+            }
+            courseDataRepository.save(courseData);
+        }
+        return courseDataById;
     }
 }
