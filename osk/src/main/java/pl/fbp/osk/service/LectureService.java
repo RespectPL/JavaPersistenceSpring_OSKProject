@@ -5,6 +5,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 import pl.fbp.osk.entity.Instructor;
 import pl.fbp.osk.entity.Lecture;
+import pl.fbp.osk.entity.Participant;
 import pl.fbp.osk.repository.LectureRepository;
 
 import java.util.List;
@@ -28,6 +29,9 @@ public class LectureService {
     }
     public List<Lecture> findByInstructor(Instructor instructor) {
         return lectureRepository.findByInstructor(instructor);
+    }
+    public List<Lecture> findByParticipant(Participant participant) {
+        return lectureRepository.findByParticipant(participant);
     }
     public Optional<Lecture> updateLecture(Map<String, Object> updates, Long lectureId) {
         Optional<Lecture> lectureById = lectureRepository.findById(lectureId);

@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 import pl.fbp.osk.entity.InternalExam;
+import pl.fbp.osk.entity.Participant;
 import pl.fbp.osk.repository.InternalExamRepository;
 
 import java.util.List;
@@ -24,6 +25,9 @@ public class InternalExamService {
     }
     public InternalExam createInternalExam(InternalExam internalExam) {
         return internalExamRepository.save(internalExam);
+    }
+    public List<InternalExam> findByParticipant(Participant participant) {
+        return internalExamRepository.findByParticipant(participant);
     }
     public void deleteById(Long internalExamId) {
         internalExamRepository.deleteById(internalExamId);

@@ -45,6 +45,33 @@ public class LectureController {
             return ResponseEntity.ok(new ArrayList<>());
         }
     }
+    @GetMapping(value = "/participant/{participantId}/get_lectures")
+    public ResponseEntity<List<Lecture>> getLectureByParticipant(@PathVariable(value = "participantId") Long participantId) {
+        Optional<Participant> getparticipant = participantService.findById(participantId);
+        if(getparticipant.isPresent()) {
+            Participant participant = getparticipant.get();
+            return ResponseEntity.ok(lectureService.findByParticipant(participant));
+        }
+        else {
+            return ResponseEntity.ok(new ArrayList<>());
+        }
+    }
+    @GetMapping(value = "/participant/{participantId}/get_lecture_sum_hour")
+    public ResponseEntity<String> getSumHourLectureByParticipant(@PathVariable(value = "participantId") Long participantId) {
+        Optional<Participant> getparticipant = participantService.findById(participantId);
+        if(getparticipant.isPresent()) {
+            Participant participant = getparticipant.get();
+            List<Lecture> lp = lectureService.findByParticipant(participant);
+            Integer sumHour = 0;
+            for(Lecture l : lp) {
+                sumHour += l.getSumHour();
+            }
+            return ResponseEntity.ok("Ustalono/odbyto " + sumHour + " godzin wykladow");
+        }
+        else {
+            return ResponseEntity.ok("Brak takiego kursanta");
+        }
+    }
 
     @PostMapping("/instructor/determine/{instructorId}/{participantId}")
     public Lecture newLecture(@PathVariable(value = "instructorId") Long instructorId,

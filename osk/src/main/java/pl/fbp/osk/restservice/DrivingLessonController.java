@@ -45,6 +45,33 @@ public class DrivingLessonController {
             return ResponseEntity.ok(new ArrayList<>());
         }
     }
+    @GetMapping(value = "/participant/{participantId}/get_driving_lessons")
+    public ResponseEntity<List<DrivingLesson>> getDrivingLessonByParticipant(@PathVariable Long participantId) {
+        Optional<Participant> getparticipant = participantService.findById(participantId);
+        if(getparticipant.isPresent()) {
+            Participant participant = getparticipant.get();
+            return ResponseEntity.ok(drivingLessonService.findByParticipant(participant));
+        }
+        else {
+            return ResponseEntity.ok(new ArrayList<>());
+        }
+    }
+    @GetMapping(value = "/participant/{participantId}/get_driving_lesson_sum_hour")
+    public ResponseEntity<String> getSumHourDrivingLessonByParticipant(@PathVariable Long participantId) {
+        Optional<Participant> getparticipant = participantService.findById(participantId);
+        if(getparticipant.isPresent()) {
+            Participant participant = getparticipant.get();
+            List<DrivingLesson> dlp = drivingLessonService.findByParticipant(participant);
+            Integer sumHour = 0;
+            for(DrivingLesson dl : dlp) {
+                sumHour += dl.getSumHour();
+            }
+            return ResponseEntity.ok("Ustalono/odbyto " + sumHour + " godzin jazd");
+        }
+        else {
+            return ResponseEntity.ok("Brak takiego kursanta");
+        }
+    }
 
     @PostMapping("/instructor/determine/{instructorId}/{participantId}/{courseId}/{vehicleId}")
     public DrivingLesson newDrivingLesson(@PathVariable(value = "instructorId") Long instructorId,

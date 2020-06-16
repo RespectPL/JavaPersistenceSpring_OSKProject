@@ -3,10 +3,7 @@ package pl.fbp.osk.restservice;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import pl.fbp.osk.entity.Course;
-import pl.fbp.osk.entity.Instructor;
-import pl.fbp.osk.entity.InternalExam;
-import pl.fbp.osk.entity.Participant;
+import pl.fbp.osk.entity.*;
 import pl.fbp.osk.service.CourseService;
 import pl.fbp.osk.service.InstructorService;
 import pl.fbp.osk.service.InternalExamService;
@@ -36,6 +33,24 @@ public class InternalExamController {
     public ResponseEntity<InternalExam> getInternalExamById(@PathVariable Long id) {
         Optional<InternalExam> internalExam = internalExamService.findById(id);
         return ResponseEntity.ok(internalExam.get());
+    }
+    @GetMapping(value = "/participant/{participantId}/check_internal_exam")
+    public ResponseEntity<String> getCheckInternalExamByParticipant(@PathVariable Long participantId) {
+        Optional<Participant> getparticipant = participantService.findById(participantId);
+        boolean check = false;
+        if(getparticipant.isPresent()) {
+            Participant participant = getparticipant.get();
+            List<InternalExam> iep = internalExamService.findByParticipant(participant);
+            String exams = "";
+            for(InternalExam ie : iep) {
+                check = true;
+                exams += "Jestes wzywany na egzamin wewnetrzny z kursu " + ie.getCourse().getOznaczenie() + "/" + ie.getCourse().getKategoria() +"\n";
+            }
+            return ResponseEntity.ok(exams);
+        }
+        else {
+            return ResponseEntity.ok("Brak takiego kursanta");
+        }
     }
 
     @PostMapping("/instructor/{instructorId}/determine_exam/{participantId}/course/{courseId}")
