@@ -37,13 +37,11 @@ public class InternalExamController {
     @GetMapping(value = "/participant/{participantId}/check_internal_exam")
     public ResponseEntity<String> getCheckInternalExamByParticipant(@PathVariable Long participantId) {
         Optional<Participant> getparticipant = participantService.findById(participantId);
-        boolean check = false;
         if(getparticipant.isPresent()) {
             Participant participant = getparticipant.get();
             List<InternalExam> iep = internalExamService.findByParticipant(participant);
             String exams = "";
             for(InternalExam ie : iep) {
-                check = true;
                 exams += "Jestes wzywany na egzamin wewnetrzny z kursu " + ie.getCourse().getOznaczenie() + "/" + ie.getCourse().getKategoria() +"\n";
             }
             return ResponseEntity.ok(exams);
