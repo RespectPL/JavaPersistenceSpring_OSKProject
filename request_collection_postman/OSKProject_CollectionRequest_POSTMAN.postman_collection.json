@@ -1,0 +1,1749 @@
+{
+	"info": {
+		"_postman_id": "72a4dba6-4c52-41db-92a9-61f6e90d035e",
+		"name": "OSKProject_CollectionRequest_POSTMAN",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Wszystkie kursy",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/osk/courses/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"osk",
+						"courses",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Wszyscy kursanci",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/osk/participants/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"osk",
+						"participants",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Wszystkie pojazdy",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/osk/vehicles/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"osk",
+						"vehicles",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Wszyscy instruktorzy",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/osk/instructors/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"osk",
+						"instructors",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Wszystkie wykłady",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/osk/lectures/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"osk",
+						"lectures",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Wszystkie jazdy",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/osk/driving_lessons/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"osk",
+						"driving_lessons",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Dane szczegółowe o wszystkich prowadzonych kursach",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/osk/course_data/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"osk",
+						"course_data",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Dane o wszystkich prowadzonych egzaminach wewnętrznych",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/osk/internal_exams/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"osk",
+						"internal_exams",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Filtrowanie kursantów za pomocą kategorii kursu (tutaj: B)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/osk/course_data/instructor/get_participants_by_course/b",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"osk",
+						"course_data",
+						"instructor",
+						"get_participants_by_course",
+						"b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Uzyskiwanie danych o zapłaconych kursach",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/osk/course_data/instructor/get_payments/true",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"osk",
+						"course_data",
+						"instructor",
+						"get_payments",
+						"true"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Uzyskiwanie danych o NIEzapłaconych kursach",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/osk/course_data/instructor/get_payments/false",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"osk",
+						"course_data",
+						"instructor",
+						"get_payments",
+						"false"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Uzyskiwanie wykładów prowadzonych przez danego instruktora (tutaj: Instruktor z ID 4)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/osk/lectures/instructor/4/get_lectures",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"osk",
+						"lectures",
+						"instructor",
+						"4",
+						"get_lectures"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sprawdzenie swoich danych przez danego instruktora (tutaj: Instruktor ID 3)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/osk/instructors/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"osk",
+						"instructors",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Uzyskiwanie danych o prowadzonych jazdach przez danego instruktora (tutaj: Instruktor ID 3)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/osk/driving_lessons/instructor/3/get_driving_lessons",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"osk",
+						"driving_lessons",
+						"instructor",
+						"3",
+						"get_driving_lessons"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sprawdzanie swoich danych przez danego kursanta (tutaj: Kursant ID 2)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/osk/participants/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"osk",
+						"participants",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sprawdzenie przez kursanta ustalonych dla niego wykładów (tutaj: Kursant ID 1)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/osk/lectures/participant/1/get_lectures",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"osk",
+						"lectures",
+						"participant",
+						"1",
+						"get_lectures"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sprawdzenie przez kursanta ustalonych dla niego jazd (tutaj: Kursant ID 2)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/osk/driving_lessons/participant/2/get_driving_lessons",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"osk",
+						"driving_lessons",
+						"participant",
+						"2",
+						"get_driving_lessons"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sprawdzenie przez kursanta ile godzin jazd ma ustalone (tutaj: Kursant ID 1)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/osk/driving_lessons/participant/1/get_driving_lesson_sum_hour",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"osk",
+						"driving_lessons",
+						"participant",
+						"1",
+						"get_driving_lesson_sum_hour"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sprawdzenie przez kursanta ile godzin wykładów ma ustalone (tutaj: Kursant ID 2)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/osk/lectures/participant/2/get_lecture_sum_hour",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"osk",
+						"lectures",
+						"participant",
+						"2",
+						"get_lecture_sum_hour"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sprawdzenie przez kursanta, czy i na jakie egzaminy wewnętrzne jest wzywany (tutaj: Kursant ID 2)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/osk/internal_exams/participant/2/check_internal_exam",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"osk",
+						"internal_exams",
+						"participant",
+						"2",
+						"check_internal_exam"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Usunięcie instruktora ID 5",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8080/osk/instructors/delete/5",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"osk",
+						"instructors",
+						"delete",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Usunięcie wewnętrznego egzaminu ID 21",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8080/osk/internal_exams/instructor/delete/21",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"osk",
+						"internal_exams",
+						"instructor",
+						"delete",
+						"21"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Usunięcie wykładu ID 16",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8080/osk/lectures/instructor/delete/16",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"osk",
+						"lectures",
+						"instructor",
+						"delete",
+						"16"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Usunięcie pojazdu ID 11",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8080/osk/vehicles/delete/11",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"osk",
+						"vehicles",
+						"delete",
+						"11"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Usunięcie kursu ID 8",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8080/osk/courses/delete/8",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"osk",
+						"courses",
+						"delete",
+						"8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Usunięcie jazdy ID 19",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8080/osk/driving_lessons/instructor/delete/19",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"osk",
+						"driving_lessons",
+						"instructor",
+						"delete",
+						"19"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Zamiana danych kursu ID 8",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"oznaczenie\": \"D\",\r\n    \"kategoria\": \"autobus\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/osk/courses/replace/8",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"osk",
+						"courses",
+						"replace",
+						"8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Zamiana danych instruktora ID 5",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"imie\": \"Tadeusz\",\r\n    \"nazwisko\": \"Jakubowski\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/osk/instructors/replace/5",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"osk",
+						"instructors",
+						"replace",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Zamiana danych pojazdu ID 11",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"typ\": \"samochod osobowy\",\r\n    \"nazwa\": \"Yamaha haha iks de\",\r\n    \"nrRejestracyjny\": \"LRA 38562\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/osk/vehicles/replace/11",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"osk",
+						"vehicles",
+						"replace",
+						"11"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Aktualizacja danych kursu ID 8",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"kategoria\": \"czterokolowiec lekki\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/osk/courses/update/8",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"osk",
+						"courses",
+						"update",
+						"8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Zakończenie kursu ID 13",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"completed\": \"true\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/osk/course_data/instructor/end_course/13",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"osk",
+						"course_data",
+						"instructor",
+						"end_course",
+						"13"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Zmiana numerów rejestracyjnych pojazdu ID 11",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nrRejestracyjny\": \"LB 46013\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/osk/vehicles/update/11",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"osk",
+						"vehicles",
+						"update",
+						"11"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Zmiana numeru telefonu kursanta ID 1",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"telefon\": \"642398201\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/osk/participants/update_data/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"osk",
+						"participants",
+						"update_data",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Zmiana danych wykładu ID 16",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"date\": \"2020-06-21\",\r\n    \"timea\": \"18:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/osk/lectures/instructor/update/16",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"osk",
+						"lectures",
+						"instructor",
+						"update",
+						"16"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Zmiana danych egzaminu wewnętrznego ID 21",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"date\": \"2020-07-17\",\r\n    \"time\": \"7:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/osk/internal_exams/instructor/update/21",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"osk",
+						"internal_exams",
+						"instructor",
+						"update",
+						"21"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Zmiana nazwiska instruktora ID 5",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nazwisko\": \"Karolak\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/osk/instructors/update/5",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"osk",
+						"instructors",
+						"update",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Zmiana danych jazdy ID 19",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"date\": \"2020-07-01\",\r\n    \"time\": \"7:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/osk/driving_lessons/instructor/update/19",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"osk",
+						"driving_lessons",
+						"instructor",
+						"update",
+						"19"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Czynność płacenia za kurs ID 13 przez kursanta",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"paid\": \"true\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/osk/course_data/participant/pay_course/13",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"osk",
+						"course_data",
+						"participant",
+						"pay_course",
+						"13"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Dodanie pierwszego kursanta (ID 1)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"imie\": \"Arkadiusz\",\r\n    \"nazwisko\": \"Polak\",\r\n    \"pesel\": \"96063001234\",\r\n    \"telefon\": \"567890123\",\r\n    \"pkk\": \"01234567890123456789\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/osk/participants/register",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"osk",
+						"participants",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Dodanie drugiego kursanta (ID 2)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"imie\": \"Janusz\",\r\n    \"nazwisko\": \"Biznes\",\r\n    \"pesel\": \"55022209089\",\r\n    \"telefon\": \"678901234\",\r\n    \"pkk\": \"23456789012345678901\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/osk/participants/register",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"osk",
+						"participants",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Dodanie pierwszego instruktora (ID 3)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"imie\": \"Hubert\",\r\n    \"nazwisko\": \"Parafiniuk\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/osk/instructors/add",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"osk",
+						"instructors",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Dodanie drugiego instruktora (ID 4)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"imie\": \"Marek\",\r\n    \"nazwisko\": \"Ryba\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/osk/instructors/add",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"osk",
+						"instructors",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Dodanie trzeciego instruktora (ID 5)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"imie\": \"Karol\",\r\n    \"nazwisko\": \"Wygnany\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/osk/instructors/add",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"osk",
+						"instructors",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Dodanie pierwszego kursu (ID 6)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"oznaczenie\": \"B\",\r\n    \"kategoria\": \"samochod osobowy do 3,5 t\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/osk/courses/add",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"osk",
+						"courses",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Dodanie drugiego kursu (ID 7)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"oznaczenie\": \"A\",\r\n    \"kategoria\": \"motocykl\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/osk/courses/add",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"osk",
+						"courses",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Dodanie trzeciego kursu (ID 8)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"oznaczenie\": \"AM\",\r\n    \"kategoria\": \"motorower\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/osk/courses/add",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"osk",
+						"courses",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Dodanie pierwszego pojazdu (ID 9)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"typ\": \"samochod osobowy\",\r\n    \"nazwa\": \"Suzuki Swift\",\r\n    \"nrRejestracyjny\": \"LRA 12580\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/osk/vehicles/add",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"osk",
+						"vehicles",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Dodanie drugiego pojazdu (ID 10)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"typ\": \"motocykl\",\r\n    \"nazwa\": \"Yamaha TZR 50/70\",\r\n    \"nrRejestracyjny\": \"LRA 0022\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/osk/vehicles/add",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"osk",
+						"vehicles",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Dodanie trzeciego pojazdu (ID 11)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"typ\": \"motorower\",\r\n    \"nazwa\": \"Bardzo nieznany model\",\r\n    \"nrRejestracyjny\": \"LRA 0000\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/osk/vehicles/add",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"osk",
+						"vehicles",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Zapisanie się na kurs A przez kursanta o ID 1 (course_data - ID 13)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/osk/course_data/participant/1/join_course/A",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"osk",
+						"course_data",
+						"participant",
+						"1",
+						"join_course",
+						"A"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Zapisanie się na kurs B przez kursanta o ID 2 (course_data - ID 13)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/osk/course_data/participant/2/join_course/B",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"osk",
+						"course_data",
+						"participant",
+						"2",
+						"join_course",
+						"B"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ustalenie pierwszego wykładu przez instructora o ID 3 dla kursanta o ID 1 (lectures - ID 14)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"temat\": \"Znaki ostrzegawcze\",\r\n    \"date\": \"2020-06-14\",\r\n    \"timea\": \"15:00\",\r\n    \"sumHour\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/osk/lectures/instructor/determine/3/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"osk",
+						"lectures",
+						"instructor",
+						"determine",
+						"3",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ustalenie drugiego wykładu przez instruktora o ID 3 dla kursanta o ID 1 (lectures - ID 15)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"temat\": \"Znaki nakazu\",\r\n    \"date\": \"2020-06-15\",\r\n    \"timea\": \"15:00\",\r\n    \"sumHour\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/osk/lectures/instructor/determine/3/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"osk",
+						"lectures",
+						"instructor",
+						"determine",
+						"3",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ustalenie wykładu przez instruktora ID 4 dla kursanta ID 2 (lectures - ID 16)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"temat\": \"Testowy wyklad\",\r\n    \"date\": \"2020-06-15\",\r\n    \"timea\": \"15:00\",\r\n    \"sumHour\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/osk/lectures/instructor/determine/4/2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"osk",
+						"lectures",
+						"instructor",
+						"determine",
+						"4",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ustalenie pierwszej jazdy przez instruktora ID 4 dla kursanta ID 2 na kursie ID 6 pojazdem ID 9 (driving_lesson - ID 17)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"date\": \"2020-06-14\",\r\n    \"time\": \"15:00\",\r\n    \"sumHour\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/osk/driving_lessons/instructor/determine/4/2/6/9",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"osk",
+						"driving_lessons",
+						"instructor",
+						"determine",
+						"4",
+						"2",
+						"6",
+						"9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ustalenie drugiej jazdy przez instruktora ID 4 dla kusanta ID 2 na kursie ID 6 pojazdem ID 9 (driving_lesson - ID 18)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"date\": \"2020-06-15\",\r\n    \"time\": \"15:00\",\r\n    \"sumHour\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/osk/driving_lessons/instructor/determine/4/2/6/9",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"osk",
+						"driving_lessons",
+						"instructor",
+						"determine",
+						"4",
+						"2",
+						"6",
+						"9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ustalenie jazdy przez instruktora ID 3 kursantowi ID 1 na kursie ID 7 pojazdem ID 10 (driving_lesson - ID 19)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"date\": \"2020-06-21\",\r\n    \"time\": \"18:00\",\r\n    \"sumHour\": 5\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/osk/driving_lessons/instructor/determine/3/1/7/10",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"osk",
+						"driving_lessons",
+						"instructor",
+						"determine",
+						"3",
+						"1",
+						"7",
+						"10"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ustalenie egzamin wewnętrznego przez instruktora ID 3 dla kursanta ID 1 na kursie 7 (internal_exam - ID 20)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"date\": \"2020-06-21\",\r\n    \"time\": \"12:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/osk/internal_exams/instructor/3/determine_exam/1/course/7",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"osk",
+						"internal_exams",
+						"instructor",
+						"3",
+						"determine_exam",
+						"1",
+						"course",
+						"7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ustalenie egzaminu wewnętrznego przez instruktora ID 3 dla kursanta ID 2 na kursie ID 6",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"date\": \"2020-06-22\",\r\n    \"time\": \"17:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/osk/internal_exams/instructor/3/determine_exam/2/course/6",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"osk",
+						"internal_exams",
+						"instructor",
+						"3",
+						"determine_exam",
+						"2",
+						"course",
+						"6"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
