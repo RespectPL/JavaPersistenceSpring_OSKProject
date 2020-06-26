@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "72a4dba6-4c52-41db-92a9-61f6e90d035e",
+		"_postman_id": "c4186d45-808f-4b4f-a1aa-fb987629b289",
 		"name": "OSKProject_CollectionRequest_POSTMAN",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -1375,7 +1375,7 @@
 			"response": []
 		},
 		{
-			"name": "Zapisanie się na kurs A przez kursanta o ID 1 (course_data - ID 13)",
+			"name": "Zapisanie się na kurs A przez kursanta o ID 1 (course_data - ID 12)",
 			"request": {
 				"method": "POST",
 				"header": [],
@@ -1447,7 +1447,7 @@
 			"response": []
 		},
 		{
-			"name": "Ustalenie pierwszego wykładu przez instructora o ID 3 dla kursanta o ID 1 (lectures - ID 14)",
+			"name": "Ustalenie pierwszego wykładu przez instructora o ID 3 dla kursanta o ID 1 (lecture - ID 14)",
 			"request": {
 				"method": "POST",
 				"header": [],
@@ -1483,7 +1483,7 @@
 			"response": []
 		},
 		{
-			"name": "Ustalenie drugiego wykładu przez instruktora o ID 3 dla kursanta o ID 1 (lectures - ID 15)",
+			"name": "Ustalenie drugiego wykładu przez instruktora o ID 3 dla kursanta o ID 1 (lecture - ID 15)",
 			"request": {
 				"method": "POST",
 				"header": [],
@@ -1519,7 +1519,7 @@
 			"response": []
 		},
 		{
-			"name": "Ustalenie wykładu przez instruktora ID 4 dla kursanta ID 2 (lectures - ID 16)",
+			"name": "Ustalenie wykładu przez instruktora ID 4 dla kursanta ID 2 (lecture - ID 16)",
 			"request": {
 				"method": "POST",
 				"header": [],
@@ -1669,7 +1669,7 @@
 			"response": []
 		},
 		{
-			"name": "Ustalenie egzamin wewnętrznego przez instruktora ID 3 dla kursanta ID 1 na kursie 7 (internal_exam - ID 20)",
+			"name": "Ustalenie egzamin wewnętrznego przez instruktora ID 3 dla kursanta ID 1 na kursie ID 7 (internal_exam - ID 20)",
 			"request": {
 				"method": "POST",
 				"header": [],
@@ -1707,7 +1707,7 @@
 			"response": []
 		},
 		{
-			"name": "Ustalenie egzaminu wewnętrznego przez instruktora ID 3 dla kursanta ID 2 na kursie ID 6",
+			"name": "Ustalenie egzaminu wewnętrznego przez instruktora ID 3 dla kursanta ID 2 na kursie ID 6 (internal_exam - ID 21)",
 			"request": {
 				"method": "POST",
 				"header": [],
