@@ -1,0 +1,12 @@
+ASPIRUJĘ DO OCENY: 4
+
+UZASADNIENIE:
+1. Wykorzystane narzędzie Spring Framework (Spring Boot + Maven + git)
+2. Kod jest dostępny w zewnętrznym repozytorium razem z dokumentacją (git: https://github.com/RespectPL/SKE-FBP_OSKProject)
+3. więcej niż 10 poprawnych zgodnych z REST endpointów (o wiele więcej metod GET/POST/PUT/PATCH/DELETE niż 4)
+4. Do wszystkich endpointów przygotowana kolekcja requestów za pomocą programu POSTMAN i umieszczona w repozytorium w katalogu "request_collection_postman".
+5. W bazie wykorzystywanej przez aplikację znajduje się 8 tabel.
+6. Logika biznesowa zawarta, ale wykorzystująca tylko DI (@Autowired itp.), na IoC nie znalazłem zastosowania w projekcie.
+7. Przygotowana dokumentacja opisująca przeznaczenie oraz przygotowanie diagramu przypadków użycia za pomocą notacji UML. Dokumentacja wraz z diagramem przypadków użycia znajduje się w repozytorium w katalogu "documentation".
+
+Dodatkowo w repozytorium znalazł się katalog "request_curl_scripts" zawierający skrypty o rozszerzeniu .bat, które zawierają requesty typu POST/PUT/GET/PATCH/DELETE wykonywane za pomocą CURL.
